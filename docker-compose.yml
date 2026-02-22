@@ -95,7 +95,7 @@ services:
       dockerfile: gateway/Dockerfile
     ports:
       - "8000:8000"
-    env_file: .env.docker
+    env_file: .env
     depends_on:
       postgres:
         condition: service_healthy
@@ -116,7 +116,7 @@ services:
       dockerfile: auth_service/Dockerfile
     ports:
       - "8001:8001"
-    env_file: .env.docker
+    env_file: .env
     depends_on:
       postgres:
         condition: service_healthy
@@ -136,7 +136,7 @@ services:
       dockerfile: file_service/Dockerfile
     ports:
       - "8002:8002"
-    env_file: .env.docker
+    env_file: .env
     depends_on:
       postgres:
         condition: service_healthy
@@ -156,7 +156,7 @@ services:
       dockerfile: rag_worker/Dockerfile
     ports:
       - "8003:8003"
-    env_file: .env.docker
+    env_file: .env
     depends_on:
       postgres:
         condition: service_healthy
@@ -178,7 +178,7 @@ services:
       dockerfile: llm_service/Dockerfile
     ports:
       - "8004:8004"
-    env_file: .env.docker
+    env_file: .env
     depends_on:
       postgres:
         condition: service_healthy
@@ -201,7 +201,7 @@ services:
       dockerfile: monitoring_service/Dockerfile
     ports:
       - "8005:8005"
-    env_file: .env.docker
+    env_file: .env
     depends_on:
       postgres:
         condition: service_healthy
