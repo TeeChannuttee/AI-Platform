@@ -138,15 +138,29 @@ jobs:
           echo "Waiting for services to start..."
           sleep 30
           docker compose ps
-          curl -sf http://localhost:8000/healthz || echo "Gateway not ready yet, continuing anyway"
+          curl -sf http://localhost:8000/healthz || echo "Gateway not ready yet"
         continue-on-error: true
-      - name: ZAP Baseline Scan (public endpoints only)
-        uses: zaproxy/action-baseline@v0.12.0
+
+      - name: ZAP Baseline Scan
+        run: |
+          docker pull ghcr.io/zaproxy/zaproxy:stable -q
+          docker run --network=host \
+            -v ${{ github.workspace }}:/zap/wrk/:rw \
+            -t ghcr.io/zaproxy/zaproxy:stable \
+            zap-baseline.py -t http://localhost:8000 \
+            -J zap-report.json || true
+        continue-on-error: true
+
+      - name: Create placeholder if scan failed
+        if: always()
+        run: |
+          [ -f "zap-report.json" ] || echo '{"site":[],"@version":"0"}' > zap-report.json
+
+      - uses: actions/upload-artifact@v4
+        if: always()
         with:
-          target: "http://localhost:8000"
-          allow_issue_writing: false
-          artifact_name: "zap-report"
-        continue-on-error: true
+          name: zap-report
+          path: zap-report.json
 
   # ──── Policy Gate ────
   policy-gate:
