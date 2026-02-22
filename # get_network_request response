@@ -1,0 +1,24 @@
+# get_network_request response
+## Request http://localhost:8000/files/upload/init
+Status:  [pending]
+### Request Headers
+- sec-ch-ua-platform:"macOS"
+- authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZmVjOTYxYy0zOGJiLTQ4NjEtYjcyMS1lMmE4OTdmNDIxMjYiLCJ0aWQiOiI1MzZkZTIzNi1hNzE1LTQ1ZWItODljMi04OWYyZGU4ZWQ2ZTgiLCJyb2xlIjoiYWRtaW4iLCJzY29wZXMiOlsiYWRtaW4iXSwiaWF0IjoxNzcxNzYyMjE4LCJleHAiOjE3NzE3NjQwMTgsImlzcyI6ImFpLXBsYXRmb3JtIiwiYXVkIjoiYWktcGxhdGZvcm0tYXBpIiwianRpIjoiMGVjYTQ2Y2YtOWQ3ZC00NGM2LThlZWQtOGRlYTZjMDQ0MmRkIn0.2Vy163LdC0EWYBf_tyePG65wLJBq_MN2GAJ_9kx4BFA
+- referer:http://localhost:3000/
+- idempotency-key:dd9a1a30-482b-4d66-9205-01d4ebb23e76
+- sec-ch-ua:"Not:A-Brand";v="99", "Google Chrome";v="145", "Chromium";v="145"
+- sec-ch-ua-mobile:?0
+- user-agent:Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36
+- content-type:application/json
+- accept:*/*
+- accept-encoding:gzip, deflate, br, zstd
+- accept-language:en-US,en;q=0.9
+- connection:keep-alive
+- content-length:65
+- host:localhost:8000
+- origin:http://localhost:3000
+- sec-fetch-dest:empty
+- sec-fetch-mode:cors
+- sec-fetch-site:same-site
+### Request Body
+{"filename":"test_upload.txt","mime_type":"text/plain","size":12}
