@@ -1,0 +1,27 @@
+# ═══════════════════════════════════════════════
+# DEV/TEST dependencies — NOT installed in production images.
+# For local development, testing, and CI only.
+# ═══════════════════════════════════════════════
+
+-r requirements-runtime.txt
+
+# Testing
+pytest>=7.4.0
+pytest-asyncio>=0.23.0
+pytest-cov>=4.1.0
+httpx  # for TestClient
+
+# Linting & Formatting
+ruff>=0.2.0
+black>=24.0.0
+mypy>=1.8.0
+
+# Security scanning (CI)
+bandit>=1.7.7
+pip-audit>=2.7.0
+
+# Database migrations
+alembic>=1.13.0
+
+# Debugging
+ipython>=8.0.0

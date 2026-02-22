@@ -1,0 +1,3 @@
+# LLM Service special dependencies
+-r ../requirements-runtime.txt
+openai>=1.0.0

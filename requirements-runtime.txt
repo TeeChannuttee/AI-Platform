@@ -1,0 +1,31 @@
+# ═══════════════════════════════════════════════
+# RUNTIME dependencies — installed in production Docker images.
+# Keep this lean: NO dev/test/build tools here.
+# ═══════════════════════════════════════════════
+
+# Framework
+fastapi>=0.110.0
+uvicorn[standard]>=0.27.0
+python-multipart>=0.0.6
+
+# Database
+sqlalchemy[asyncio]>=2.0.25
+asyncpg>=0.29.0
+psycopg2-binary>=2.9.9
+
+# Config & Validation
+pydantic>=2.5.0
+pydantic-settings>=2.1.0
+
+# Auth & Security
+python-jose[cryptography]>=3.3.0
+argon2-cffi>=23.1.0
+
+# Cache & Messaging
+redis>=5.0.0
+
+# HTTP Client (inter-service calls)
+httpx>=0.26.0
+
+# Object Storage
+minio>=7.2.0

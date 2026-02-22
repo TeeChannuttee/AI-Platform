@@ -1,0 +1,31 @@
+# Dependencies
+node_modules
+frontend/node_modules
+frontend/.next
+
+# Git
+.git
+.gitignore
+
+# IDE
+.vscode
+.idea
+
+# Python cache
+__pycache__
+*.pyc
+*.pyo
+.mypy_cache
+.pytest_cache
+
+# Env
+.env
+.env.local
+
+# Docs
+*.md
+LICENSE
+
+# Artifacts
+.gemini
+.agents

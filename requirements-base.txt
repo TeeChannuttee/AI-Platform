@@ -1,0 +1,15 @@
+# === Base requirements for ALL services ===
+fastapi>=0.110.0
+uvicorn[standard]>=0.27.0
+sqlalchemy[asyncio]>=2.0.25
+asyncpg>=0.29.0
+psycopg2-binary>=2.9.9
+pydantic>=2.5.0
+pydantic-settings>=2.1.0
+python-jose[cryptography]>=3.3.0
+argon2-cffi>=23.1.0
+redis>=5.0.0
+httpx>=0.26.0
+python-multipart>=0.0.6
+minio>=7.2.0
+flashrank>=0.2.0

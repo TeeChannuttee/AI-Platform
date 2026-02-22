@@ -1,0 +1,56 @@
+# ═══════════════════════════════════════
+# Enterprise AI Platform — .gitignore
+# ═══════════════════════════════════════
+
+# ─── Environment / Secrets ───
+.env
+.env.local
+.env.docker
+!.env.example
+
+# ─── Python ───
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+.eggs/
+.pytest_cache/
+.venv/
+venv/
+*.whl
+
+# ─── Node.js / Frontend ───
+node_modules/
+.next/
+out/
+.turbo/
+tsconfig.tsbuildinfo
+
+# ─── IDE / Editor ───
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ─── Docker ───
+*.log
+
+# ─── MinIO data (local dev) ───
+minio-data/
+
+# ─── CI artifacts ───
+bandit-report.json
+pip-audit-report.json
+pip-audit-dev-report.json
+trivy-*.json
+sbom-*.json
+
+# ─── OS ───
+.DS_Store
+Desktop.ini

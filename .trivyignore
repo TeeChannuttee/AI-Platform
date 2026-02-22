@@ -1,0 +1,12 @@
+# ═══════════════════════════════════════════════
+# Trivy Allowlist — Accepted CVEs with rationale
+# ═══════════════════════════════════════════════
+# Each entry: CVE-ID  # rationale for acceptance
+#
+# Only add CVEs here after security review confirms:
+# 1. No exploit path exists in our environment
+# 2. Upstream fix is pending (tracked)
+# 3. Risk is mitigated by other controls
+#
+# Example:
+# CVE-2024-00000  # No exploit: library not exposed to user input; fix pending upstream
