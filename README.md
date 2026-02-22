@@ -64,7 +64,7 @@ docker compose up -d --build
 
 **Default Admin Account:**
 - Email: `admin@example.com`
-- Password: `Admin@123456`
+- Password: `Channuttee2547@`
 
 ## Quick Start (Local Development)
 
